@@ -26,15 +26,31 @@ const selectedTopicId = ref<string | null>(null);
 const remoteBackupReady = ref(false);
 let remoteSaveTimer: number | undefined;
 
+const navigationCategories = computed(() => roadmap.filter((category) => category.id !== "design-patterns"));
+const architectureCategory = computed(() => roadmap.find((category) => category.id === "architecture"));
+
 const allTopics = computed<TopicWithCategory[]>(() =>
   roadmap.flatMap((category) =>
-    category.topics.map((topic) => ({
-      ...topic,
-      categoryId: category.id,
-      categoryTitle: category.title,
-      categoryColor: category.color,
-      categoryIcon: category.icon,
-    })),
+    category.topics.map((topic) => {
+      if (category.id === "design-patterns" && architectureCategory.value) {
+        return {
+          ...topic,
+          group: topic.group ? `Design Patterns - ${topic.group}` : "Design Patterns",
+          categoryId: architectureCategory.value.id,
+          categoryTitle: architectureCategory.value.title,
+          categoryColor: architectureCategory.value.color,
+          categoryIcon: architectureCategory.value.icon,
+        };
+      }
+
+      return {
+        ...topic,
+        categoryId: category.id,
+        categoryTitle: category.title,
+        categoryColor: category.color,
+        categoryIcon: category.icon,
+      };
+    }),
   ),
 );
 
@@ -104,9 +120,10 @@ const summary = computed(() => {
 
 const categoryStats = computed(() =>
   Object.fromEntries(
-    roadmap.map((category) => {
-      const total = category.topics.length;
-      const completed = category.topics.filter((topic) => getTopicProgress(topic.id).status === "completed").length;
+    navigationCategories.value.map((category) => {
+      const topics = allTopics.value.filter((topic) => topic.categoryId === category.id);
+      const total = topics.length;
+      const completed = topics.filter((topic) => getTopicProgress(topic.id).status === "completed").length;
       return [category.id, { total, completed, progress: percent(completed, total) }];
     }),
   ),
@@ -229,7 +246,7 @@ watch(
     />
 
     <main class="mx-auto grid max-w-7xl gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[320px_1fr] lg:px-8">
-      <Sidebar :categories="roadmap" :selected-category="progress.filters.category" :stats="categoryStats" @select="selectCategory" />
+      <Sidebar :categories="navigationCategories" :selected-category="progress.filters.category" :stats="categoryStats" @select="selectCategory" />
 
       <div class="space-y-6">
         <ProgressOverview
@@ -242,7 +259,7 @@ watch(
 
         <section class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           <div
-            v-for="category in roadmap"
+            v-for="category in navigationCategories"
             :key="category.id"
             class="rounded-2xl border p-4"
             :class="[colorClasses[category.color].soft, colorClasses[category.color].border]"
@@ -255,7 +272,7 @@ watch(
           </div>
         </section>
 
-        <SearchAndFilters :model-value="progress.filters" :categories="roadmap" @update:model-value="updateFilters" />
+        <SearchAndFilters :model-value="progress.filters" :categories="navigationCategories" @update:model-value="updateFilters" />
 
         <section class="space-y-4">
           <div class="flex items-end justify-between gap-3">
