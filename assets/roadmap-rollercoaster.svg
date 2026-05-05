@@ -1,0 +1,77 @@
+<svg width="1000" height="260" viewBox="0 0 1000 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Animated Java Backend Roadmap roller coaster</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1000" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0F2FE"/>
+      <stop offset="0.55" stop-color="#F0FDF4"/>
+      <stop offset="1" stop-color="#FEF3C7"/>
+    </linearGradient>
+    <linearGradient id="trackGradient" x1="60" y1="130" x2="940" y2="130" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="0.34" stop-color="#059669"/>
+      <stop offset="0.68" stop-color="#EA580C"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.18"/>
+    </filter>
+    <path id="coasterPath" d="M60 172 C122 92 170 92 220 172 C268 248 336 244 380 156 C416 82 472 70 520 132 C568 194 620 194 664 128 C708 62 764 48 808 112 C852 176 884 218 940 126"/>
+  </defs>
+
+  <rect width="1000" height="260" rx="28" fill="url(#sky)"/>
+
+  <g opacity="0.65">
+    <circle cx="86" cy="58" r="18" fill="#FBBF24"/>
+    <circle cx="890" cy="50" r="10" fill="#60A5FA"/>
+    <circle cx="932" cy="78" r="6" fill="#34D399"/>
+    <circle cx="150" cy="218" r="7" fill="#FB7185"/>
+    <circle cx="720" cy="222" r="8" fill="#A78BFA"/>
+  </g>
+
+  <g opacity="0.48" stroke="#94A3B8" stroke-width="2">
+    <path d="M115 186V232"/>
+    <path d="M220 172V232"/>
+    <path d="M337 204V232"/>
+    <path d="M458 94V232"/>
+    <path d="M620 170V232"/>
+    <path d="M758 76V232"/>
+    <path d="M884 190V232"/>
+  </g>
+
+  <use href="#coasterPath" stroke="#E2E8F0" stroke-width="22" stroke-linecap="round"/>
+  <use href="#coasterPath" stroke="url(#trackGradient)" stroke-width="9" stroke-linecap="round"/>
+  <use href="#coasterPath" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 18" opacity="0.75">
+    <animate attributeName="stroke-dashoffset" values="0;-56" dur="2.8s" repeatCount="indefinite"/>
+  </use>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="800" font-size="18" fill="#0F172A">
+    <text x="74" y="42">Fundamentos</text>
+    <text x="356" y="48">Spring</text>
+    <text x="565" y="58">Arquitetura</text>
+    <text x="812" y="42">Produção</text>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <g>
+      <animateMotion dur="6.5s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#coasterPath"/>
+      </animateMotion>
+      <g transform="translate(-38 -25)">
+        <rect x="5" y="12" width="72" height="32" rx="12" fill="#F97316"/>
+        <rect x="13" y="4" width="42" height="18" rx="9" fill="#2563EB"/>
+        <rect x="50" y="5" width="18" height="16" rx="7" fill="#10B981"/>
+        <path d="M17 18H66" stroke="#FED7AA" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="21" cy="49" r="8" fill="#0F172A"/>
+        <circle cx="62" cy="49" r="8" fill="#0F172A"/>
+        <circle cx="21" cy="49" r="3" fill="#CBD5E1"/>
+        <circle cx="62" cy="49" r="3" fill="#CBD5E1"/>
+        <text x="25" y="34" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="900" fill="#FFFFFF">Java</text>
+      </g>
+    </g>
+  </g>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <text x="500" y="226" font-size="20" font-weight="900" fill="#0F172A">Java Backend Developer Roadmap 2026</text>
+    <text x="500" y="248" font-size="13" font-weight="700" fill="#475569">uma jornada cheia de curvas, subidas, descidas e progresso real</text>
+  </g>
+</svg>

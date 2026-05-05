@@ -1,5 +1,9 @@
 # Java Backend Developer Roadmap 2026
 
+<p align="center">
+  <img src="./assets/roadmap-rollercoaster.svg" alt="Animação de um carrinho percorrendo uma montanha-russa do roadmap Java Backend Developer 2026" width="100%" />
+</p>
+
 Aplicação frontend para acompanhar, organizar e medir a evolução nos estudos de **Java Backend Development** em 2026.
 
 O projeto transforma um roadmap de estudos em um painel interativo com categorias, tópicos, subtópicos, progresso, favoritos, anotações e backup local do progresso para versionar no GitHub.
