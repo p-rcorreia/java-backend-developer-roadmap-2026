@@ -1,0 +1,11 @@
+services:
+  roadmap:
+    build:
+      context: .
+    image: java-backend-roadmap-2026:latest
+    container_name: java-backend-roadmap-2026
+    ports:
+      - "2026:8080"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped

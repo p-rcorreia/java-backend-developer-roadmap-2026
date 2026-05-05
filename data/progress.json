@@ -1,0 +1,25 @@
+{
+  "topics": {
+    "spring-boot": {
+      "status": "studying",
+      "completedSubtopics": [],
+      "notes": "",
+      "favorite": false
+    },
+    "design-patterns": {
+      "status": "not-started",
+      "completedSubtopics": [],
+      "notes": "",
+      "favorite": false
+    }
+  },
+  "filters": {
+    "search": "",
+    "category": "security",
+    "status": "all",
+    "level": "all",
+    "favoritesOnly": false,
+    "pendingOnly": false
+  },
+  "darkMode": false
+}
