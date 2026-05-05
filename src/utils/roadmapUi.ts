@@ -9,6 +9,7 @@ import {
   Database,
   Leaf,
   Network,
+  Puzzle,
   ServerCog,
   ShieldCheck,
   TestTube2,
@@ -25,6 +26,7 @@ export const iconMap: Record<string, LucideIcon> = {
   ServerCog,
   TestTube2,
   Network,
+  Puzzle,
   ShieldCheck,
   CloudCog,
   Compass,
@@ -42,6 +44,7 @@ export const colorClasses: Record<string, { soft: string; text: string; bg: stri
   red: { soft: "bg-red-50 dark:bg-red-950/40", text: "text-red-700 dark:text-red-300", bg: "bg-red-500", border: "border-red-200 dark:border-red-900", ring: "ring-red-100 dark:ring-red-950" },
   sky: { soft: "bg-sky-50 dark:bg-sky-950/40", text: "text-sky-700 dark:text-sky-300", bg: "bg-sky-500", border: "border-sky-200 dark:border-sky-900", ring: "ring-sky-100 dark:ring-sky-950" },
   amber: { soft: "bg-amber-50 dark:bg-amber-950/40", text: "text-amber-700 dark:text-amber-300", bg: "bg-amber-500", border: "border-amber-200 dark:border-amber-900", ring: "ring-amber-100 dark:ring-amber-950" },
+  indigo: { soft: "bg-indigo-50 dark:bg-indigo-950/40", text: "text-indigo-700 dark:text-indigo-300", bg: "bg-indigo-500", border: "border-indigo-200 dark:border-indigo-900", ring: "ring-indigo-100 dark:ring-indigo-950" },
 };
 
 export const statusMeta: Record<TopicStatus, { label: string; icon: LucideIcon; className: string }> = {

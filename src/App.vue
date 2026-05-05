@@ -132,6 +132,32 @@ const visibleTopics = computed(() => {
   });
 });
 
+const groupedVisibleSections = computed(() => {
+  const sections = new Map<string, { key: string; title: string; subtitle: string; color: string; topics: TopicWithCategory[] }>();
+
+  visibleTopics.value.forEach((topic) => {
+    const title = topic.group ?? topic.categoryTitle;
+    const subtitle = topic.group ? topic.categoryTitle : "Trilha principal";
+    const key = `${topic.categoryId}:${title}`;
+
+    if (!sections.has(key)) {
+      sections.set(key, {
+        key,
+        title,
+        subtitle,
+        color: topic.categoryColor,
+        topics: [],
+      });
+    }
+
+    sections.get(key)?.topics.push(topic);
+  });
+
+  return Array.from(sections.values());
+});
+
+const totalSubtopics = computed(() => allTopics.value.reduce((total, topic) => total + topic.subtopics.length, 0));
+
 function updateFilters(filters: RoadmapFilters) {
   progress.filters = filters;
 }
@@ -235,25 +261,37 @@ watch(
           <div class="flex items-end justify-between gap-3">
             <div>
               <h2 class="text-xl font-black text-slate-950 dark:text-white">Roadmap</h2>
-              <p class="text-sm text-slate-600 dark:text-slate-300">{{ visibleTopics.length }} tópicos encontrados</p>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                {{ visibleTopics.length }} tópicos encontrados em {{ groupedVisibleSections.length }} seções, com {{ totalSubtopics }} subtópicos no total
+              </p>
             </div>
           </div>
 
           <div v-if="visibleTopics.length" class="grid gap-4">
-            <TopicCard
-              v-for="topic in visibleTopics"
-              :key="topic.id"
-              :topic="topic"
-              :status="getTopicProgress(topic.id).status"
-              :completed-subtopics="getTopicProgress(topic.id).completedSubtopics"
-              :favorite="getTopicProgress(topic.id).favorite"
-              :expanded="expandedTopics.has(topic.id)"
-              @status="setStatus(topic.id, $event)"
-              @toggle-subtopic="toggleSubtopic(topic.id, $event)"
-              @toggle-favorite="toggleFavorite(topic.id)"
-              @toggle-expand="toggleExpanded(topic.id)"
-              @open-details="selectedTopicId = topic.id"
-            />
+            <section v-for="section in groupedVisibleSections" :key="section.key" class="space-y-3">
+              <div class="flex items-center gap-3 rounded-2xl border bg-white/80 px-4 py-3 dark:bg-slate-950/70" :class="colorClasses[section.color].border">
+                <span class="h-2.5 w-2.5 rounded-full" :class="colorClasses[section.color].bg" />
+                <div>
+                  <h3 class="text-sm font-black text-slate-950 dark:text-white">{{ section.title }}</h3>
+                  <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">{{ section.subtitle }} · {{ section.topics.length }} tópicos</p>
+                </div>
+              </div>
+
+              <TopicCard
+                v-for="topic in section.topics"
+                :key="topic.id"
+                :topic="topic"
+                :status="getTopicProgress(topic.id).status"
+                :completed-subtopics="getTopicProgress(topic.id).completedSubtopics"
+                :favorite="getTopicProgress(topic.id).favorite"
+                :expanded="expandedTopics.has(topic.id)"
+                @status="setStatus(topic.id, $event)"
+                @toggle-subtopic="toggleSubtopic(topic.id, $event)"
+                @toggle-favorite="toggleFavorite(topic.id)"
+                @toggle-expand="toggleExpanded(topic.id)"
+                @open-details="selectedTopicId = topic.id"
+              />
+            </section>
           </div>
 
           <div v-else class="panel p-8 text-center">

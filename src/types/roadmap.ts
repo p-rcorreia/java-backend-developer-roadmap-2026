@@ -4,6 +4,7 @@ export type TopicLevel = "básico" | "intermediário" | "avançado";
 export interface RoadmapTopic {
   id: string;
   title: string;
+  group?: string;
   level: TopicLevel;
   description: string;
   whyItMatters: string;
