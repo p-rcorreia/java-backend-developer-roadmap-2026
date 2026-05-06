@@ -68,6 +68,19 @@ function getTopicProgress(topicId: string) {
   return progress.topics[topicId] ?? createEmptyTopicProgress();
 }
 
+function sanitizeProgress() {
+  for (const [topicId, item] of Object.entries(progress.topics)) {
+    const topic = topicById.value.get(topicId);
+    if (!topic) continue;
+
+    const validSubtopics = new Set(topic.subtopics);
+    const sanitizedSubtopics = item.completedSubtopics.filter((subtopic, index, current) => validSubtopics.has(subtopic) && current.indexOf(subtopic) === index);
+
+    item.completedSubtopics = sanitizedSubtopics;
+    item.status = normalizeStatus(item.status, sanitizedSubtopics.length, topic.subtopics.length);
+  }
+}
+
 function setStatus(topicId: string, status: TopicStatus) {
   const item = ensureTopicProgress(topicId);
   const topic = topicById.value.get(topicId);
@@ -203,10 +216,13 @@ async function handleImport(file: File) {
     progress.topics = imported.topics;
     progress.filters = imported.filters;
     progress.darkMode = imported.darkMode;
+    sanitizeProgress();
   } catch {
     alert("Não foi possível importar o JSON de progresso.");
   }
 }
+
+sanitizeProgress();
 
 onMounted(async () => {
   const remoteProgress = await loadRemoteProgress();
@@ -214,6 +230,7 @@ onMounted(async () => {
     progress.topics = remoteProgress.topics;
     progress.filters = remoteProgress.filters;
     progress.darkMode = remoteProgress.darkMode;
+    sanitizeProgress();
   }
   remoteBackupReady.value = true;
   await saveRemoteProgress(progress);
