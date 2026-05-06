@@ -1,21 +1,242 @@
 {
   "topics": {
     "spring-boot": {
-      "status": "studying",
+      "status": "not-started",
       "completedSubtopics": [],
       "notes": "",
       "favorite": false
     },
     "design-patterns": {
+      "status": "studying",
+      "completedSubtopics": [
+        "Factory Method",
+        "Builder",
+        "Abstract Factory"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "rest-best-practices": {
       "status": "not-started",
       "completedSubtopics": [],
+      "notes": "",
+      "favorite": false
+    },
+    "pattern-singleton": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Intenção do padrão",
+        "Implementação lazy",
+        "Thread safety",
+        "Problemas com estado global",
+        "Testabilidade",
+        "Enum singleton",
+        "Singleton vs bean singleton do Spring",
+        "Implementação eager"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "pattern-factory-method": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Product",
+        "Creator",
+        "Concrete creator",
+        "Encapsular criação",
+        "Reduzir acoplamento",
+        "Exemplo com notificações",
+        "Exemplo com formas de pagamento",
+        "Quando factory simples basta"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "pattern-abstract-factory": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Famílias de produtos",
+        "Factory interface",
+        "Concrete factory",
+        "Compatibilidade entre objetos",
+        "Exemplo com provedores externos",
+        "Exemplo com UI/theme, noção",
+        "Trade-off de complexidade"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "pattern-builder": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Fluent API",
+        "Objeto imutável",
+        "Parâmetros opcionais",
+        "Validação no build",
+        "Builder manual",
+        "Lombok @Builder, noção",
+        "Builder vs construtor telescópico"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "pattern-prototype": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Clone",
+        "Cópia rasa",
+        "Cópia profunda",
+        "Objetos caros de criar",
+        "Prototype registry",
+        "Riscos de mutabilidade",
+        "Quando evitar Cloneable"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "jvm": {
+      "status": "studying",
+      "completedSubtopics": [
+        "O que é JVM",
+        "Bytecode",
+        "Garbage Collector",
+        "Como uma aplicação Java executa",
+        "Noção de memória",
+        "JDK vs JRE vs JVM",
+        "Noção de performance",
+        "Portabilidade: escreva uma vez, execute em qualquer lugar",
+        "Compatibilidade da JVM com cada sistema operacional"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "compilation-execution": {
+      "status": "studying",
+      "completedSubtopics": [
+        "Arquivo .java",
+        "Compilador javac",
+        "Bytecode",
+        "Arquivo .class",
+        "Tempo de compilação vs tempo de execução"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "java-17": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Diferença entre versões LTS e não LTS",
+        "OpenJDK vs Oracle JDK, noção inicial",
+        "Sintaxe básica",
+        "Método main, noção inicial",
+        "Variáveis",
+        "Comentários",
+        "Identificadores válidos",
+        "Convenções de nomenclatura",
+        "Operadores aritméticos",
+        "Operadores de comparação",
+        "Operadores lógicos",
+        "Operadores de atribuição",
+        "Operadores de incremento e decremento",
+        "var",
+        "Controle de fluxo",
+        "if, else if e else",
+        "Operador ternário",
+        "instanceof, noção inicial",
+        "switch expressions",
+        "Loops: for, while e do while",
+        "Controle de loop com break e continue",
+        "Classes",
+        "Pacotes",
+        "Modificadores de acesso",
+        "text blocks",
+        "String templates, noção histórica",
+        "records",
+        "sealed classes, apenas noção inicial",
+        "Pattern matching, apenas noção inicial",
+        "boas práticas com Java moderno"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "primitive-types": {
+      "status": "completed",
+      "completedSubtopics": [
+        "byte",
+        "short",
+        "int",
+        "long",
+        "float",
+        "double",
+        "boolean",
+        "char",
+        "Promoções automáticas",
+        "Literais numéricos com L, F e D",
+        "Wrappers: Integer, Long, Double, Boolean",
+        "Autoboxing e unboxing",
+        "Comparação com == e equals",
+        "Diferença entre valor e referência",
+        "BigDecimal para valores monetários",
+        "null em objetos",
+        "Imutabilidade em String"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "oop-core": {
+      "status": "studying",
+      "completedSubtopics": [
+        "Classe",
+        "Objeto",
+        "Atributo",
+        "Método"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "records": {
+      "status": "studying",
+      "completedSubtopics": [
+        "O que são records",
+        "Imutabilidade",
+        "Uso em DTOs",
+        "Diferença entre record e class",
+        "Quando usar record em respostas de API"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "java-21-25-lts": {
+      "status": "studying",
+      "completedSubtopics": [
+        "Pattern matching para switch"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "productivity-libraries": {
+      "status": "not-started",
+      "completedSubtopics": [],
+      "notes": "",
+      "favorite": false
+    },
+    "technical-english": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Ler documentação",
+        "Pesquisar em inglês",
+        "Escrever README simples em inglês",
+        "Ler mensagens de erro",
+        "Entender artigos técnicos",
+        "Vocabulário de backend"
+      ],
       "notes": "",
       "favorite": false
     }
   },
   "filters": {
     "search": "",
-    "category": "security",
+    "category": "java-core",
     "status": "all",
     "level": "all",
     "favoritesOnly": false,
