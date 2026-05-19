@@ -95,12 +95,15 @@
       "favorite": false
     },
     "jvm": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
         "O que é JVM",
         "JDK vs JRE vs JVM",
         "Bytecode",
         "Garbage Collector",
+        "Heap",
+        "Stack",
+        "Classpath",
         "Noção de memória",
         "Noção de performance",
         "Como uma aplicação Java executa",
@@ -111,16 +114,23 @@
       "favorite": false
     },
     "compilation-execution": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
         "Arquivo .java",
         "Compilador javac",
         "Bytecode",
         "Arquivo .class",
         "Execução com java",
+        "Classpath",
+        "JAR",
+        "Fat JAR",
+        "Build com Maven",
+        "Build com Gradle, noção",
+        "Compilação vs empacotamento",
         "Tempo de compilação vs tempo de execução",
         "Erros de compilação",
-        "Erros de runtime"
+        "Erros de runtime",
+        "Como o Spring Boot inicia"
       ],
       "notes": "",
       "favorite": false
@@ -131,7 +141,10 @@
         "Diferença entre versões LTS e não LTS",
         "OpenJDK vs Oracle JDK, noção inicial",
         "Sintaxe básica",
+        "Classes",
         "Método main, noção inicial",
+        "Pacotes",
+        "Modificadores de acesso",
         "Variáveis",
         "Comentários",
         "Identificadores válidos",
@@ -141,17 +154,14 @@
         "Operadores lógicos",
         "Operadores de atribuição",
         "Operadores de incremento e decremento",
-        "var",
         "Controle de fluxo",
         "if, else if e else",
         "Operador ternário",
         "instanceof, noção inicial",
-        "switch expressions",
         "Loops: for, while e do while",
         "Controle de loop com break e continue",
-        "Classes",
-        "Pacotes",
-        "Modificadores de acesso",
+        "var",
+        "switch expressions",
         "text blocks",
         "String templates, noção histórica",
         "records",
@@ -173,21 +183,21 @@
         "double",
         "boolean",
         "char",
-        "Promoções automáticas",
-        "Literais numéricos com L, F e D",
         "Wrappers: Integer, Long, Double, Boolean",
         "Autoboxing e unboxing",
+        "null em objetos",
         "Comparação com == e equals",
         "Diferença entre valor e referência",
+        "Imutabilidade em String",
         "BigDecimal para valores monetários",
-        "null em objetos",
-        "Imutabilidade em String"
+        "Promoções automáticas",
+        "Literais numéricos com L, F e D"
       ],
       "notes": "",
       "favorite": false
     },
     "oop-core": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
         "Classe",
         "Objeto",
@@ -196,9 +206,19 @@
         "Construtor",
         "Encapsulamento",
         "Herança",
+        "Polimorfismo",
+        "Abstração",
         "Interface",
+        "Classe abstrata",
         "Sobrecarga",
-        "Sobrescrita"
+        "Sobrescrita",
+        "Composição",
+        "Associação",
+        "Agregação",
+        "Coesão",
+        "Acoplamento",
+        "Responsabilidade de classe",
+        "Diferença entre entidade, serviço e objeto de valor"
       ],
       "notes": "",
       "favorite": false
@@ -217,21 +237,38 @@
       "favorite": false
     },
     "java-21-25-lts": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
-        "Pattern matching para switch"
+        "Java 21 como LTS anterior",
+        "Java 25 como LTS atual no ciclo 2026",
+        "Virtual threads",
+        "Sequenced collections",
+        "Pattern matching para switch",
+        "Record patterns, noção",
+        "Unnamed classes e instance main methods, noção",
+        "Scoped values, noção",
+        "Structured concurrency, noção",
+        "Quando atualizar versão de Java em projeto real",
+        "Compatibilidade com Spring Boot",
+        "Diferença entre feature preview, incubator e final"
       ],
       "notes": "",
       "favorite": false
     },
     "productivity-libraries": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
         "Lombok",
         "MapStruct",
+        "Jackson",
         "Apache Commons",
         "Guava, noção",
-        "Quando usar biblioteca externa"
+        "Hibernate Validator",
+        "SpringDoc OpenAPI",
+        "Testcontainers, noção",
+        "Quando usar biblioteca externa",
+        "Riscos de dependências demais",
+        "Custo de manutenção e atualização"
       ],
       "notes": "",
       "favorite": false
@@ -250,19 +287,33 @@
       "favorite": false
     },
     "enums": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
         "Criar enums",
-        "Enums para status"
+        "Enums com atributos",
+        "Enums com métodos",
+        "Enums para status",
+        "Enums em regras de negócio",
+        "Enums em entidades JPA",
+        "EnumType.STRING"
       ],
       "notes": "",
       "favorite": false
     },
     "annotations-reflection": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
         "O que são annotations",
-        "Annotations built-in"
+        "Annotations built-in",
+        "Criar annotation customizada",
+        "RetentionPolicy",
+        "Target",
+        "Reflection API",
+        "Class, Method e Field",
+        "Leitura de metadados em runtime",
+        "Custo e riscos de reflection",
+        "Como Spring usa annotations",
+        "Como JPA usa annotations"
       ],
       "notes": "",
       "favorite": false
@@ -346,6 +397,246 @@
         "FileChooser",
         "Módulos javafx.controls, javafx.media e javafx.web",
         "Armadilhas de nomes iguais a classes do JavaFX"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "collections": {
+      "status": "completed",
+      "completedSubtopics": [
+        "List",
+        "ArrayList",
+        "LinkedList, apenas noção",
+        "Set",
+        "HashSet",
+        "LinkedHashSet",
+        "TreeSet",
+        "Map",
+        "HashMap",
+        "LinkedHashMap",
+        "TreeMap",
+        "Queue",
+        "Iteração",
+        "Ordenação",
+        "Comparator",
+        "Comparable",
+        "Imutabilidade em coleções",
+        "Quando usar cada estrutura"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "generics": {
+      "status": "completed",
+      "completedSubtopics": [
+        "O que são generics",
+        "Type safety",
+        "Generic classes",
+        "Generic methods",
+        "Wildcards",
+        "? extends",
+        "? super",
+        "Generics em collections",
+        "Generics em repositories e services",
+        "Erasure, apenas noção inicial"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "exceptions": {
+      "status": "completed",
+      "completedSubtopics": [
+        "O que são exceções",
+        "Checked exceptions",
+        "Unchecked exceptions",
+        "RuntimeException",
+        "try/catch",
+        "finally",
+        "throw",
+        "throws",
+        "Criar exceções customizadas",
+        "Quando lançar exceção",
+        "Quando tratar exceção",
+        "Tratamento global no Spring Boot",
+        "Diferença entre erro de regra de negócio e erro técnico"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "lambda-expressions": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Lambda expressions",
+        "forEach",
+        "Lambda com corpo",
+        "Parênteses opcionais",
+        "Tipo explícito exige parênteses",
+        "Chaves opcionais",
+        "Variáveis final e efetivamente finais",
+        "Captura de variáveis locais",
+        "Redução de código repetitivo",
+        "Uso em coleções e callbacks"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "functional-programming": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Programação funcional em Java",
+        "Função como comportamento",
+        "Interfaces funcionais",
+        "@FunctionalInterface",
+        "Predicate",
+        "Function",
+        "Consumer",
+        "Supplier",
+        "Composição de operações",
+        "Imutabilidade, noção inicial",
+        "Efeitos colaterais, noção inicial",
+        "Quando usar estilo funcional",
+        "Quando evitar estilo funcional para não piorar legibilidade"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "stream-api": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Stream API",
+        "stream()",
+        "filter",
+        "map",
+        "reduce",
+        "collect",
+        "toList",
+        "forEach",
+        "sorted",
+        "distinct",
+        "anyMatch",
+        "allMatch",
+        "Operações intermediárias",
+        "Operações terminais",
+        "Quando usar stream",
+        "Quando evitar stream para não piorar legibilidade"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "streams-lambda": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Lambda expressions",
+        "Functional interfaces",
+        "Predicate",
+        "Function",
+        "Consumer",
+        "Supplier",
+        "Stream API",
+        "map",
+        "filter",
+        "reduce",
+        "collect",
+        "forEach",
+        "sorted",
+        "distinct",
+        "anyMatch",
+        "allMatch",
+        "Optional",
+        "Quando usar stream",
+        "Quando evitar stream para não piorar legibilidade"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "optional": {
+      "status": "completed",
+      "completedSubtopics": [
+        "O que é Optional",
+        "Optional.empty",
+        "Optional.of",
+        "Optional.ofNullable",
+        "map",
+        "flatMap",
+        "orElse",
+        "orElseGet",
+        "orElseThrow",
+        "Uso correto em retornos",
+        "Evitar Optional em atributos de entidade"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "date-time": {
+      "status": "completed",
+      "completedSubtopics": [
+        "LocalDate",
+        "LocalDateTime",
+        "Instant",
+        "ZonedDateTime",
+        "Duration",
+        "Period",
+        "DateTimeFormatter",
+        "Timezone",
+        "Diferença entre data local e instante global",
+        "Cuidados com datas em APIs"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "java-concurrency": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Thread",
+        "Runnable",
+        "Callable",
+        "ExecutorService",
+        "CompletableFuture",
+        "Virtual threads",
+        "Race condition",
+        "synchronized",
+        "Locks",
+        "AtomicInteger e classes atomic",
+        "ConcurrentHashMap",
+        "Thread safety",
+        "Deadlock em memória",
+        "Quando evitar paralelismo prematuro"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "logging-java": {
+      "status": "completed",
+      "completedSubtopics": [
+        "SLF4J",
+        "Logback",
+        "Níveis TRACE, DEBUG, INFO, WARN, ERROR",
+        "Mensagem clara e contextual",
+        "Evitar logar dados sensíveis",
+        "Correlation ID",
+        "Logs estruturados, noção",
+        "Diferença entre log e exceção",
+        "Configuração por ambiente"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "programming-paradigms": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Linguagem compilada",
+        "Linguagem interpretada",
+        "Compilação para bytecode",
+        "JIT compilation",
+        "Linguagem procedural",
+        "Programação orientada a objetos",
+        "Programação funcional, noção",
+        "Programação declarativa, noção",
+        "Java vs JavaScript, noção",
+        "Java vs Python, noção",
+        "Ruby on Rails como framework MVC de alta produtividade",
+        "Spring Boot vs Ruby on Rails, noção comparativa",
+        "Escolher ferramenta pelo contexto"
       ],
       "notes": "",
       "favorite": false
