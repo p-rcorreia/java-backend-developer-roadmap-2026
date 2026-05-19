@@ -98,12 +98,12 @@
       "status": "studying",
       "completedSubtopics": [
         "O que é JVM",
+        "JDK vs JRE vs JVM",
         "Bytecode",
         "Garbage Collector",
-        "Como uma aplicação Java executa",
         "Noção de memória",
-        "JDK vs JRE vs JVM",
         "Noção de performance",
+        "Como uma aplicação Java executa",
         "Portabilidade: escreva uma vez, execute em qualquer lugar",
         "Compatibilidade da JVM com cada sistema operacional"
       ],
@@ -117,7 +117,10 @@
         "Compilador javac",
         "Bytecode",
         "Arquivo .class",
-        "Tempo de compilação vs tempo de execução"
+        "Execução com java",
+        "Tempo de compilação vs tempo de execução",
+        "Erros de compilação",
+        "Erros de runtime"
       ],
       "notes": "",
       "favorite": false
@@ -189,19 +192,26 @@
         "Classe",
         "Objeto",
         "Atributo",
-        "Método"
+        "Método",
+        "Construtor",
+        "Encapsulamento",
+        "Herança",
+        "Interface",
+        "Sobrecarga",
+        "Sobrescrita"
       ],
       "notes": "",
       "favorite": false
     },
     "records": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
         "O que são records",
         "Imutabilidade",
         "Uso em DTOs",
         "Diferença entre record e class",
-        "Quando usar record em respostas de API"
+        "Quando usar record em respostas de API",
+        "Limitações de records"
       ],
       "notes": "",
       "favorite": false
@@ -215,8 +225,14 @@
       "favorite": false
     },
     "productivity-libraries": {
-      "status": "not-started",
-      "completedSubtopics": [],
+      "status": "studying",
+      "completedSubtopics": [
+        "Lombok",
+        "MapStruct",
+        "Apache Commons",
+        "Guava, noção",
+        "Quando usar biblioteca externa"
+      ],
       "notes": "",
       "favorite": false
     },
@@ -229,6 +245,107 @@
         "Ler mensagens de erro",
         "Entender artigos técnicos",
         "Vocabulário de backend"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "enums": {
+      "status": "studying",
+      "completedSubtopics": [
+        "Criar enums",
+        "Enums para status"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "annotations-reflection": {
+      "status": "studying",
+      "completedSubtopics": [
+        "O que são annotations",
+        "Annotations built-in"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "input-output": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Conceito de input e output",
+        "Fluxos de entrada e saída",
+        "Conversão de inteiros para caracteres",
+        "Noção de tabela Unicode",
+        "Leitura de arquivos",
+        "Escrita de arquivos",
+        "API IO clássica",
+        "FileWriter",
+        "FileReader",
+        "IOException",
+        "Fechamento de recursos",
+        "API NIO",
+        "Path",
+        "Paths",
+        "Files.write",
+        "Files.readAllBytes",
+        "StandardCharsets",
+        "Caminhos portáveis",
+        "Noção de AIO",
+        "Comunicação entre sistemas"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "serialization": {
+      "status": "completed",
+      "completedSubtopics": [
+        "Conceito de serialização",
+        "Conceito de desserialização",
+        "Interface Serializable",
+        "Persistência de objetos em arquivo",
+        "Serialização de listas",
+        "ObjectOutputStream",
+        "ObjectInputStream",
+        "serialVersionUID",
+        "try-with-resources",
+        "@SuppressWarnings(\"unchecked\")",
+        "Cast ao ler objetos",
+        "Quando usar serialização",
+        "Quando preferir banco de dados",
+        "Cuidados com segurança",
+        "Armadilhas comuns"
+      ],
+      "notes": "",
+      "favorite": false
+    },
+    "javafx": {
+      "status": "completed",
+      "completedSubtopics": [
+        "O que é JavaFX",
+        "JavaFX fora do JDK",
+        "Configuração do module-path",
+        "Diferença entre cmd e PowerShell",
+        "Configuração do VS Code para JavaFX",
+        "Application",
+        "launch(args)",
+        "Método start",
+        "Stage",
+        "Scene",
+        "Controles: Label, Button e TextField",
+        "Layouts: VBox, HBox e BorderPane",
+        "GridPane",
+        "Insets",
+        "Eventos de clique com lambda",
+        "ObservableList",
+        "ListView",
+        "Image",
+        "ImageView",
+        "Caminhos locais com File e toURI",
+        "Media",
+        "MediaPlayer",
+        "MediaView",
+        "WebView",
+        "FileChooser",
+        "Módulos javafx.controls, javafx.media e javafx.web",
+        "Armadilhas de nomes iguais a classes do JavaFX"
       ],
       "notes": "",
       "favorite": false
