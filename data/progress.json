@@ -270,13 +270,19 @@
         "Leitura de arquivos",
         "Escrita de arquivos",
         "API IO clássica",
-        "API NIO"
+        "API NIO",
+        "FileReader",
+        "Fechamento de recursos",
+        "FileWriter",
+        "IOException",
+        "Files.readAllBytes",
+        "Files.write"
       ],
       "notes": "",
       "favorite": false
     },
     "serialization": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
         "Conceito de serialização",
         "Conceito de desserialização",
@@ -289,13 +295,16 @@
         "try-with-resources",
         "@SuppressWarnings(\"unchecked\")",
         "Quando usar serialização",
-        "Quando preferir banco de dados"
+        "Quando preferir banco de dados",
+        "Cuidados com segurança",
+        "Cast ao ler objetos",
+        "Armadilhas comuns"
       ],
       "notes": "",
       "favorite": false
     },
     "javafx": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
         "O que é JavaFX",
         "JavaFX fora do JDK",
@@ -320,7 +329,17 @@
         "MediaPlayer",
         "MediaView",
         "WebView",
-        "FileChooser"
+        "FileChooser",
+        "Módulos javafx.controls, javafx.media e javafx.web",
+        "Armadilhas de nomes iguais a classes do JavaFX",
+        "launch(args)",
+        "CSS no JavaFX",
+        "Estilização direta com setStyle",
+        "Arquivo CSS separado",
+        "Classes de estilo com getStyleClass().add(...)",
+        "Propriedades de fonte no JavaFX CSS",
+        "Cores com nomes, hexadecimal, RGB e RGBA",
+        "Separação entre estilo visual e código Java"
       ],
       "notes": "",
       "favorite": false
