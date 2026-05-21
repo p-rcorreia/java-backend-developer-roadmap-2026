@@ -123,7 +123,7 @@
       "favorite": false
     },
     "java-17": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
         "Diferença entre versões LTS e não LTS",
         "OpenJDK vs Oracle JDK, noção inicial",
@@ -307,7 +307,7 @@
       "favorite": false
     },
     "javafx": {
-      "status": "studying",
+      "status": "completed",
       "completedSubtopics": [
         "O que é JavaFX",
         "JavaFX fora do JDK",
@@ -480,8 +480,8 @@
     }
   },
   "filters": {
-    "search": "String.format",
-    "category": "all",
+    "search": "",
+    "category": "java-core",
     "status": "all",
     "level": "all",
     "favoritesOnly": false,
