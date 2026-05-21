@@ -123,7 +123,7 @@
       "favorite": false
     },
     "java-17": {
-      "status": "completed",
+      "status": "studying",
       "completedSubtopics": [
         "Diferença entre versões LTS e não LTS",
         "OpenJDK vs Oracle JDK, noção inicial",
@@ -150,6 +150,8 @@
         "var",
         "switch expressions",
         "text blocks",
+        "String.format para apresentação de números",
+        "StringBuilder para montagem eficiente de texto",
         "String templates, noção histórica",
         "records",
         "sealed classes, apenas noção inicial",
@@ -275,6 +277,7 @@
         "Fechamento de recursos",
         "FileWriter",
         "IOException",
+        "Scanner para entrada via terminal",
         "Files.readAllBytes",
         "Files.write"
       ],
@@ -304,7 +307,7 @@
       "favorite": false
     },
     "javafx": {
-      "status": "completed",
+      "status": "studying",
       "completedSubtopics": [
         "O que é JavaFX",
         "JavaFX fora do JDK",
@@ -337,6 +340,9 @@
         "Estilização direta com setStyle",
         "Arquivo CSS separado",
         "Classes de estilo com getStyleClass().add(...)",
+        "Timeline para atualização contínua de interface",
+        "KeyFrame para definir ações em intervalos de tempo",
+        "javafx.util.Duration",
         "Propriedades de fonte no JavaFX CSS",
         "Cores com nomes, hexadecimal, RGB e RGBA",
         "Separação entre estilo visual e código Java"
@@ -376,6 +382,7 @@
         "Checked exceptions",
         "Unchecked exceptions",
         "RuntimeException",
+        "IllegalArgumentException para parâmetros inválidos",
         "try/catch",
         "finally",
         "throw",
@@ -388,7 +395,7 @@
       "favorite": false
     },
     "lambda-expressions": {
-      "status": "completed",
+      "status": "studying",
       "completedSubtopics": [
         "Lambda expressions",
         "forEach",
@@ -434,8 +441,12 @@
       "favorite": false
     },
     "date-time": {
-      "status": "not-started",
-      "completedSubtopics": [],
+      "status": "studying",
+      "completedSubtopics": [
+        "LocalDateTime",
+        "DateTimeFormatter",
+        "Formatação de horário com padrão HH:mm:ss"
+      ],
       "notes": "",
       "favorite": false
     },
@@ -456,11 +467,21 @@
       "completedSubtopics": [],
       "notes": "",
       "favorite": false
+    },
+    "passwords-secrets": {
+      "status": "studying",
+      "completedSubtopics": [
+        "SecureRandom para geração segura de valores aleatórios",
+        "Entropia em geração de senhas",
+        "Diferença entre Random e SecureRandom, noção"
+      ],
+      "notes": "",
+      "favorite": false
     }
   },
   "filters": {
-    "search": "",
-    "category": "java-core",
+    "search": "String.format",
+    "category": "all",
     "status": "all",
     "level": "all",
     "favoritesOnly": false,
