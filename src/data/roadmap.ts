@@ -66,6 +66,7 @@ export const roadmap: RoadmapCategory[] = [
           "text blocks",
           "String.format para apresentação de números",
           "StringBuilder para montagem eficiente de texto",
+          "Random para seleção aleatória simples",
           "String templates, noção histórica",
           "records",
           "sealed classes, apenas noção inicial",
